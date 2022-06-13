@@ -4,6 +4,7 @@ import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 
 import CommentModal from "../CommentModal/CommentModal";
 import "./Card.css";
+import { Link } from "react-router-dom";
 
 const Card = ({
 	comments,
@@ -26,15 +27,17 @@ const Card = ({
 	};
 	return (
 		<div className="card">
-			<img src={media} alt={name} className="feed-media" />
+			<div className="media">
+				<img src={media} alt={name} className="feed-media" />
+			</div>
 			<div className="card-user">
-				<div className="user-info">
+				<Link to="/profile" className="user-info">
 					<img src={profilePhoto} alt={name} className="profile-photo" />
 					<div>
 						<h3 className="name">{name}</h3>
 						<h4 className="username">{username}</h4>
 					</div>
-				</div>
+				</Link>
 				<small className="date">{date}</small>
 			</div>
 			<div className="card-body">
@@ -49,7 +52,11 @@ const Card = ({
 					<ChatBubbleIcon onClick={showModal} /> {comments}
 				</div>
 			</div>
-			<CommentModal show={show} handleClose={handleClose} title="Comment on post" />
+			<CommentModal
+				show={show}
+				handleClose={handleClose}
+				title="Comment on post"
+			/>
 		</div>
 	);
 };

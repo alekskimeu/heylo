@@ -3,7 +3,7 @@
     background-color: var(--card-bg);
     position: absolute ;
     right: 0;
-    width: 17vw;
+    min-width: 16vw;
     height: fit-content;
     box-shadow: 2px 4px 8px var(--border);
     border-radius: .5rem;
@@ -16,3 +16,23 @@
 .rightbar .header {
     padding: 2rem 2rem 0 2rem;
 }
+
+@media screen and (max-width: 1442px) {
+    .rightbar {
+        min-width: 20vw;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .rightbar {
+        min-width: 27vw;
+    }
+}
+
+@media screen and (max-width: 1124px) {
+    .rightbar {
+        display: none;
+    }
+}
+

@@ -1,11 +1,11 @@
 .leftbar {
     flex: .4;
     padding: 2rem;
-    width: 15vw;
     background-color: var(--card-bg);
     height: fit-content;
+    min-width: 15vw;
     box-shadow: 2px 4px 8px var(--border);
-    position: absolute;
+    position: fixed;
     border-radius: .5rem;
     -webkit-border-radius: .5rem;
     -moz-border-radius: .5rem;
@@ -43,3 +43,29 @@
     color: var(--white);
     padding: .4rem 1rem;
 }
+
+@media screen and (max-width: 1442px) {
+    .leftbar {
+        min-width: 20vw;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .leftbar {
+        min-width: 24vw;
+    }
+}
+
+@media screen and (max-width: 972px) {
+    .leftbar {
+        min-width: 30vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .leftbar {
+        display: none;
+    }
+}
+
+

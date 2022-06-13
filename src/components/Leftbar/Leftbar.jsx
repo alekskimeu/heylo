@@ -34,7 +34,7 @@ const Leftbar = () => {
 					New Post <KeyboardArrowRightOutlinedIcon />
 				</Link>
 
-				<Link to="/">
+				<Link to="/profile">
 					Profile <KeyboardArrowRightOutlinedIcon />
 				</Link>
 			</div>

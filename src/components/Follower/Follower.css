@@ -2,7 +2,6 @@
     display: flex;
     gap: 1rem;
     padding: .6rem 1rem;
-    /* margin-bottom: 0.5rem; */
     transition: all .5s ease;
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
@@ -15,7 +14,7 @@
 }
 
 .follower:not(:last-child) {
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid rgba(231, 231, 231, .6);
 }
 
 .follower img {

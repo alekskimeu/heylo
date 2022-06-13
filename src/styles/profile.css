@@ -70,3 +70,10 @@
 .profile .top .btn-edit:hover {
     opacity: .8;
 }
+
+@media screen and (max-width: 642px) {
+    .profile .top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

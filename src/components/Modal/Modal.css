@@ -11,7 +11,7 @@
 .modal-main {
     position:fixed;
     background: var(--white);
-    width: 30%;
+    min-width: 30vw;
     height: auto;
     padding: 1.5rem;
     top:50%;
@@ -75,3 +75,20 @@
     text-transform: uppercase;
 }
 
+@media screen and (max-width: 1300px) {
+    .modal-main {
+        min-width: 45vw;
+    }
+}
+
+@media screen and (max-width: 962px) {
+    .modal-main {
+        min-width: 60vw;
+    }
+}
+
+@media screen and (max-width: 742px) {
+    .modal-main {
+        min-width: 90vw;
+    }
+}

@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, Layout } from "../components";
 
 import image from "../assets/images/image.jpg";
 
 import "../styles/profile.css";
+import ProfileModal from "../components/ProfileModal/ProfileModal";
 
 const Profile = () => {
+	const [show, setShow] = useState(false);
+
+	const handleClose = () => {
+		setShow(false);
+	};
+
+	const showModal = () => {
+		setShow(true);
+	};
 	return (
 		<Layout>
 			<section className="profile">
@@ -18,7 +28,7 @@ const Profile = () => {
 						<p className="posts">20 Posts</p>
 
 						<div className="profile-cta">
-							<button type="button" className="btn-edit">
+							<button type="button" className="btn-edit" onClick={showModal}>
 								Edit
 							</button>
 						</div>
@@ -57,6 +67,11 @@ const Profile = () => {
 					/>
 				</div>
 			</section>
+			<ProfileModal
+				show={show}
+				handleClose={handleClose}
+				title="Update Profile"
+			/>
 		</Layout>
 	);
 };

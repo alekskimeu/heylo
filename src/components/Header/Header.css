@@ -8,6 +8,7 @@ header {
     width: 100%;
     background-color: var(--body-bg);
     z-index: 1;
+    padding: 0 3rem;
 }
 
 header .container {
@@ -32,15 +33,21 @@ header .brand .logo {
     font-weight: 700;
 }
 
+header .account {
+    flex: .6;
+}
+
 header .account-buttons {
     display: flex;
     align-items: center;
     gap: 1rem;
-    flex: .4;
+    justify-content: flex-end;
 }
 
 header .search {
     flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 header .search input {
@@ -161,4 +168,32 @@ header .account .dropdown button, header .account .dropdown a {
 header .account .dropdown button:hover, header .account .dropdown a:hover {
     background-color: transparent;
     color: var(--primary);
+}
+
+@media screen and (max-width: 800px) {
+    header .brand, header .account {
+        flex: .3;
+    }
+
+    header .search input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    header .search {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 462px) {
+    header {
+        height: 7rem;
+    }
+
+    header .nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        justify-content: flex-start;
+    }
 }
