@@ -1,0 +1,45 @@
+.leftbar {
+    flex: .4;
+    padding: 2rem;
+    width: 15vw;
+    background-color: var(--card-bg);
+    height: fit-content;
+    box-shadow: 2px 4px 8px var(--border);
+    position: fixed;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+
+.leftbar .links {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.leftbar .links a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    padding: .4rem 0;
+    font-weight: 600;
+    border-radius: .3rem;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+}
+
+.leftbar .links a:hover {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: .4rem 1rem;
+}

@@ -1,0 +1,15 @@
+.main {
+    padding: 7rem 1rem 3rem 1rem;
+}
+
+.main > .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+}
+
+.main .content {
+    flex: 1;
+    margin: 0 22rem 0 20rem;
+}

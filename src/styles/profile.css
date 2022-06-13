@@ -1,0 +1,72 @@
+.profile {
+    flex: 1;
+}
+
+.profile .top {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 4px 8px 16px var(--border);
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+
+.profile .top img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.profile .top .name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.profile .top .username {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.profile .top .bio {
+    margin-bottom: .5rem;
+    font-size: 1.1rem;
+}
+
+.profile .top .posts {
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.profile .top .btn-edit {
+    cursor: pointer;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: .5rem 1.4rem;
+    font-weight: 600;
+    border-radius: .3rem;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+}
+
+.profile .top .btn-edit:hover {
+    opacity: .8;
+}

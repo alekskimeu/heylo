@@ -1,0 +1,83 @@
+.card {
+    background-color: var(--card-bg);
+    padding-bottom: .5rem;
+    box-shadow: 6px 12px 24px var(--shadow);
+    margin-bottom: 4rem;
+}
+
+.card .card-body {
+    padding: 1rem;
+}
+
+.card .feed-media {
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.card .card-user {
+    padding: 1rem 1rem 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card .card-user .profile-photo {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.card .card-user .name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+.card .card-user .username {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--primary);
+}
+
+.card .card-user .user-info {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.card .card-body .description {
+    font-size: 1.1rem;
+    color: var(--medium);
+}
+
+.card .date {
+    font-size: .9rem;
+}
+
+.card .card-footer {
+    padding: 0 1rem .5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.card .card-footer .MuiSvgIcon-root {
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #E7EFFF;
+}
+
+.card .card-footer .likes, .card .card-footer .comments {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
