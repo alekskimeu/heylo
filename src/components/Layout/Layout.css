@@ -1,5 +1,5 @@
 .main {
-    padding: 7rem 3rem 3rem 3rem;
+    padding: 9rem 3rem 3rem 3rem;
 }
 
 .main > .container {
@@ -7,6 +7,17 @@
     justify-content: space-between;
     gap: 1rem;
     position: relative;
+}
+
+.main .menu {
+    position: absolute;
+    left: 1rem;
+    top: 6rem;
+    display: none;
+}
+
+.main .menu .MuiSvgIcon-root {
+    font-size: 2rem;
 }
 
 .main .content {
@@ -25,10 +36,18 @@
     .main .content {
         margin-left: 0;
     }
+
+    .main .menu {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 462px) {
     .main {
-        padding-top: 9rem;
+        padding-top: 9.5rem;
+    }
+
+    .main .menu {
+        top: 7.5rem;    
     }
 }

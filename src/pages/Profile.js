@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card, Layout } from "../components";
+import { Card, Layout, UserProfile } from "../components";
 
 import image from "../assets/images/image.jpg";
 
@@ -19,21 +19,7 @@ const Profile = () => {
 	return (
 		<Layout>
 			<section className="profile">
-				<div className="top">
-					<img src={image} alt="" />
-					<div className="user-info">
-						<h3 className="name">Alex Kimeu</h3>
-						<h4 className="username">@sodapop</h4>
-						<p className="bio">I create with cool people</p>
-						<p className="posts">20 Posts</p>
-
-						<div className="profile-cta">
-							<button type="button" className="btn-edit" onClick={showModal}>
-								Edit
-							</button>
-						</div>
-					</div>
-				</div>
+				<UserProfile showModal={showModal} image={image} />
 				<div className="bottom">
 					<Card
 						username="alekskimeu"
