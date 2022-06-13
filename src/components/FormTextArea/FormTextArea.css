@@ -1,0 +1,27 @@
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem; 
+}
+
+.input-container .textarea {
+    border: 1px solid var(--border);
+    font-size: 1.05rem;
+    font-weight: normal;
+    color: rgb(68, 68, 68);
+    outline-width: 0;
+    padding: .5rem;
+    border-radius: .3rem;
+    letter-spacing: 1.2px;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+}
+
+.input-container label {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 1.4px;
+}

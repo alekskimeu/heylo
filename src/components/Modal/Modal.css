@@ -1,0 +1,77 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.modal-main {
+    position:fixed;
+    background: var(--white);
+    width: 30%;
+    height: auto;
+    padding: 1.5rem;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
+
+.modal-main .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.modal-main .modal-header .MuiSvgIcon-root {
+    cursor: pointer;
+    color: var(--danger);
+    font-size: 1.5rem;
+}
+
+.modal-main .modal-header .title {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.modal-main form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal-main form button {
+    max-width: fit-content;
+} 
+
+.modal-main form .file {
+    border: none;
+    width: fit-content;
+}
+
+.modal-main form .heading {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 1.4px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+

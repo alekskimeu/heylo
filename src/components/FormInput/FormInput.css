@@ -1,0 +1,35 @@
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem; 
+    width: 100%;
+}
+
+.input-container .input {
+    width: 100%;
+    border: none;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: rgb(68, 68, 68);
+    border: 1px solid var(--border);
+    outline-width: 0;
+    padding: .5rem;
+    border-radius: .3rem;
+    letter-spacing: 1.2px;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+}
+
+.input-container label {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 1.4px;
+}
+
+.input-container .input[type="file"] {
+    border: none;
+    width: fit-content;
+}

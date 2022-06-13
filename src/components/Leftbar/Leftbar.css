@@ -5,7 +5,7 @@
     background-color: var(--card-bg);
     height: fit-content;
     box-shadow: 2px 4px 8px var(--border);
-    position: fixed;
+    position: absolute;
     border-radius: .5rem;
     -webkit-border-radius: .5rem;
     -moz-border-radius: .5rem;

@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
+
+import CommentModal from "../CommentModal/CommentModal";
 import "./Card.css";
 
 const Card = ({
@@ -13,6 +15,15 @@ const Card = ({
 	profilePhoto,
 	username,
 }) => {
+	const [show, setShow] = useState(false);
+
+	const handleClose = () => {
+		setShow(false);
+	};
+
+	const showModal = () => {
+		setShow(true);
+	};
 	return (
 		<div className="card">
 			<img src={media} alt={name} className="feed-media" />
@@ -35,9 +46,10 @@ const Card = ({
 					{likes}
 				</div>
 				<div className="comments">
-					<ChatBubbleIcon /> {comments}
+					<ChatBubbleIcon onClick={showModal} /> {comments}
 				</div>
 			</div>
+			<CommentModal show={show} handleClose={handleClose} title="Comment on post" />
 		</div>
 	);
 };

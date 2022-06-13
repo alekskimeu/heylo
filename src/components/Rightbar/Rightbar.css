@@ -1,7 +1,7 @@
 .rightbar {
     flex: .6;
     background-color: var(--card-bg);
-    position: absolute  ;
+    position: absolute ;
     right: 0;
     width: 17vw;
     height: fit-content;
