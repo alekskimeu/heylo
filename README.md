@@ -70,6 +70,16 @@ Start the server
   npm start
 ```
 
+## To Do
+- Make the sidebars fixed when scrolling down the page
+- Finish up user Authentication/Authorization
+- Make it possible for users to upload media files
+- Make it possible for users to comment on posts
+- Display post comments on the single post page
+- Refactor the code to enhance performance
+- Write unit/functional tests
+
+
 ## Authors
 
 - [@alekskimeu](https://www.github.com/alekskimeu)
