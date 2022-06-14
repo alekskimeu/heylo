@@ -5,7 +5,7 @@
     height: fit-content;
     min-width: 15vw;
     box-shadow: 2px 4px 8px var(--border);
-    position: fixed;
+    top: 10rem;
     border-radius: .5rem;
     -webkit-border-radius: .5rem;
     -moz-border-radius: .5rem;

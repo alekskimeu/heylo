@@ -5,8 +5,11 @@ import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import CommentModal from "../CommentModal/CommentModal";
 import "./Card.css";
 import { Link } from "react-router-dom";
+import { db } from "../../firebase-config";
+import { deleteDoc, doc } from "firebase/firestore";
 
 const Card = ({
+	id, 
 	comments,
 	date,
 	description,
@@ -25,8 +28,13 @@ const Card = ({
 	const showModal = () => {
 		setShow(true);
 	};
+
+	const deletePost = async (id) => {
+		const postDoc = doc(db, "posts", id);
+		await deleteDoc(postDoc);
+	};
 	return (
-		<div className="card">
+		<Link to="/post" className="card">
 			<div className="media">
 				<img src={media} alt={name} className="feed-media" />
 			</div>
@@ -42,6 +50,19 @@ const Card = ({
 			</div>
 			<div className="card-body">
 				<p className="description">{description}</p>
+
+				<div className="card-cta">
+					<button type="button" className="edit">
+						Edit
+					</button>
+					<button
+						type="button"
+						className="delete"
+						onClick={() => deletePost(id)}
+					>
+						Delete
+					</button>
+				</div>
 			</div>
 			<div className="card-footer">
 				<div className="likes">
@@ -57,7 +78,7 @@ const Card = ({
 				handleClose={handleClose}
 				title="Comment on post"
 			/>
-		</div>
+		</Link>
 	);
 };
 

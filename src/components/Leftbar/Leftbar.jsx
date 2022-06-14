@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
 
 import FeedModal from "../FeedModal/FeedModal";
+import { MoreHoriz } from "@mui/icons-material";
 
 import image from "../../assets/images/image.jpg";
 
@@ -52,8 +53,13 @@ const Leftbar = ({ mobileMenu }) => {
 					<h3 className="name">Alex Kimeu</h3>
 					<h4 className="username">@sodapop</h4>
 				</div>
+				<MoreHoriz />
 			</Link>
-			<FeedModal show={show} handleClose={handleClose} title="Add Post" />
+			<FeedModal
+				show={show}
+				handleClose={handleClose}
+				title="Add Post"
+			/>
 		</section>
 	);
 };

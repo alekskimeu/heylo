@@ -15,6 +15,7 @@
   --medium: #2d2f31;
   --shadow: rgb(219, 219, 219);
   --border: rgb(231, 231, 231);
+  --danger: #990000;
 }
 
 html {
