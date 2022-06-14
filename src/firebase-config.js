@@ -3,12 +3,12 @@ import { getFirestore } from "@firebase/firestore";
 import { getAuth } from "@firebase/auth";
 
 const firebaseConfig = {
-	apiKey: "AIzaSyCy3qESOxDxETiNOdXQ8qpDakUZQjGKzPQ",
-	authDomain: "apex-399f2.firebaseapp.com",
-	projectId: "apex-399f2",
-	storageBucket: "apex-399f2.appspot.com",
-	messagingSenderId: "690631014307",
-	appId: "1:690631014307:web:680c8f06c91351d94ccc16",
+	apiKey: "AIzaSyAVWHb_tsW8OZ_Ma19QiWKnQE9UNi9_wpI",
+	authDomain: "adanian-d7871.firebaseapp.com",
+	projectId: "adanian-d7871",
+	storageBucket: "adanian-d7871.appspot.com",
+	messagingSenderId: "148921649438",
+	appId: "1:148921649438:web:718f7d1902c272d7c2e10f",
 };
 
 const app = initializeApp(firebaseConfig);
