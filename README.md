@@ -40,7 +40,7 @@ Share your moments with the world. Heylo is a simple social mediaweb app that al
 
 ## Demo
 
-Insert gif or link to demo
+[LIve Demo](https://heylo.vercel.app/)
 
 
 
