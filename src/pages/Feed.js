@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { db } from "../firebase-config";
-import { collection, getDocs } from "firebase/firestore";
+import React, { useState } from "react";
 import { Card, Layout } from "../components";
 import image from "../assets/images/image.jpg";
 
@@ -9,16 +7,7 @@ import "../styles/feed.css";
 const Feed = () => {
 	const [posts, setPosts] = useState([]);
 
-	const postsCollection = collection(db, "posts");
-
-	// Fetch posts from Firestore
-	useEffect(() => {
-		const fetchPosts = async () => {
-			const data = await getDocs(postsCollection);
-			setPosts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-		};
-		fetchPosts();
-	}, [postsCollection]);
+	// TODO:: Fetch posts from backend on componentDidMount
 
 	return (
 		<Layout>

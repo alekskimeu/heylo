@@ -63,7 +63,7 @@ header .search input {
     -o-border-radius: .3rem;
 }
 
-header  .account-buttons button {
+header  .account-buttons a {
     padding: .7rem 1.2rem;
     font-weight: 500;
     cursor: pointer;

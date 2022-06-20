@@ -5,33 +5,14 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
 import ExpandLessOutlinedIcon from "@mui/icons-material/ExpandLessOutlined";
 
-import LoginModal from "../LoginModal/LoginModal";
-
 import "./Header.css";
 
 const Header = () => {
 	const [user, setUser] = useState(false);
 	const [dropdown, setDropdown] = useState(false);
-	const [login, setLogin] = useState(false);
 
 	const toggleDropdown = () => {
 		setDropdown(!dropdown);
-	};
-
-	const [show, setShow] = useState(false);
-
-	const handleClose = () => {
-		setShow(false);
-	};
-
-	const showLoginModal = () => {
-		setShow(true);
-		setLogin(true);
-	};
-
-	const showRegisterModal = () => {
-		setShow(true);
-		setLogin(false);
 	};
 
 	const showHideDropdown = dropdown ? "dropdown show" : "dropdown";
@@ -68,31 +49,18 @@ const Header = () => {
 								</div>
 							) : (
 								<div className="account-buttons">
-									<button
-										type="button"
-										className="login"
-										onClick={showLoginModal}
-									>
+									<Link to="/login" className="login">
 										Login
-									</button>
-									<button
-										type="button"
-										className="register"
-										onClick={showRegisterModal}
-									>
+									</Link>
+									<Link to="/register" className="register">
 										Register
-									</button>
+									</Link>
 								</div>
 							)}
 						</div>
 					</nav>
 				</div>
 			</header>
-			<LoginModal
-				show={show}
-				handleClose={handleClose}
-				title={login ? "Login" : "Register"}
-			/>
 		</>
 	);
 };

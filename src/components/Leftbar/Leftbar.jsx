@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
 
-import FeedModal from "../FeedModal/FeedModal";
 import { MoreHoriz } from "@mui/icons-material";
 
 import image from "../../assets/images/image.jpg";
@@ -10,16 +9,6 @@ import image from "../../assets/images/image.jpg";
 import "./Leftbar.css";
 
 const Leftbar = ({ mobileMenu }) => {
-	const [show, setShow] = useState(false);
-
-	const handleClose = () => {
-		setShow(false);
-	};
-
-	const showModal = () => {
-		setShow(true);
-	};
-
 	const showHideMobileMenu = mobileMenu ? "leftbar" : "leftbar show";
 
 	return (
@@ -37,7 +26,7 @@ const Leftbar = ({ mobileMenu }) => {
 				<Link to="/">
 					Notifications <KeyboardArrowRightOutlinedIcon />
 				</Link>
-				<Link to="/" onClick={showModal}>
+				<Link to="/new-post">
 					New Post <KeyboardArrowRightOutlinedIcon />
 				</Link>
 
@@ -55,11 +44,6 @@ const Leftbar = ({ mobileMenu }) => {
 				</div>
 				<MoreHoriz />
 			</Link>
-			<FeedModal
-				show={show}
-				handleClose={handleClose}
-				title="Add Post"
-			/>
 		</section>
 	);
 };

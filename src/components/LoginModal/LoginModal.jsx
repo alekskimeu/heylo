@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import {
-	createUserWithEmailAndPassword,
-	signInWithEmailAndPassword,
-} from "@firebase/auth";
-import { auth } from "../../firebase-config";
+import axios from "axios";
 
 import LoginIcon from "@mui/icons-material/Login";
 
@@ -14,21 +10,18 @@ import AppButton from "../AppButton/AppButton";
 const LoginModal = ({ show, handleClose, showModal, title, login }) => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	const [user, setUser] = useState(null);
 
 	const registerUser = async () => {
-		const userData = await createUserWithEmailAndPassword(
-			auth,
-			email,
-			password
-		);
-		setUser(userData);
+		console.log(email);
+		axios
+			.post("http://localhost:5000/users/register", {
+				email: email,
+				password: password,
+			})
+			.then((response) => console.log(response));
 	};
 
-	const loginUser = async () => {
-		const userData = await signInWithEmailAndPassword(auth, email, password);
-		setUser(userData);
-	};
+	const loginUser = async () => {};
 
 	return (
 		<Modal
